@@ -11,6 +11,74 @@
     <title>Crystals Collector Game</title>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <h1>Crystals Collector Game!</h1>
+        </div>
+
+        <section>
+
+            <div class="row">
+                <h2>How to Play</h2>
+            </div>
+
+            <div class="row">
+                <p>You will be given a random number at the start of the game.</p>
+            
+                <br/>
+                        
+                <p>There are four crystals below. By clicking on a crystal, you will adda specific amout of points to your total score.</p>
+        
+                <br/>
+        
+                <p>You win the game by matching your total score to random number. If your total score goes above the random number, you lose.</p>
+        
+                <br/>
+        
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+        
+                <br/>
+        
+                <p>Each time the game starts, it will change the values of each crystal.</p>
+            </div>
+               
+        </section>
+
+        <div class="row">
+            <div class="col" id="newNumber">
+                <p class="h3">Your number is: <span id="numberSelected"></span></p>
+            </div>
+            <div class="col" id="counter">
+                <p class="h3">Wins: <span id="wins"></span></p>
+                <p class="h3">Losses: <span id="losses"></span></p>
+            </div>
+        </div>
+
+        <div class="row" id="crystal_images">
+            <div class="col crystal">
+                <img src="assets/images/red-crystal.jpg" class="img-fluid" alt="Red Crystal" id="red_crystal">
+            </div>
+            <div class="col crystal">
+                <img src="assets/images/blue-crystal.jpg" class="img-fluid" alt="Blue Crystal" id="blue_crystal">
+            </div>
+            <div class="col crystal">
+                <img src="assets/images/purple-crystal.jpg" class="img-fluid" alt="Purple Crystal" id="purple_crystal">
+            </div>
+            <div class="col crystal">
+                <img src="assets/images/pink-crystal.jpg" class="img-fluid" alt="Pink Crystal" id="pink_crystal">
+            </div>
+        </div>
+
+        <div class="row" id="playerScore">
+            <div class="col">
+                <p class="h3">Your total score is: <span id="totalScore"></span></p>
+            </div>
+        </div>
+
+        
+
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
