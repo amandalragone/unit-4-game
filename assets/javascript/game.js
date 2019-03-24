@@ -7,6 +7,17 @@ $(document).ready(function(){
 
     $("#numberSelected").text(newNumber);
 
+    //Each of the crystals will pick a random number between 1 and 12.
+
+    var allCrystals = [];
+
+    for (var i = 0; i < 4; i++) {
+        var crystalValue = 1 + Math.floor(Math.random() * 12);
+        allCrystals.push(crystalValue);
+    };
+    
+    console.log(allCrystals);
+
 
 
 })
