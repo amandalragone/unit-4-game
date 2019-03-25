@@ -6,49 +6,45 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Margarine" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <title>Crystals Collector Game</title>
 </head>
-<body>
+<body background="assets/images/gplaypattern.png">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <h1>Crystals Collector Game!</h1>
         </div>
 
-        <section>
+    
+        <section class="row">
 
-            <div class="row">
+            <div class="col-12 justify-content-center">
                 <h2>How to Play</h2>
             </div>
-
-            <div class="row">
-                <p>You will be given a random number at the start of the game.</p>
             
-                <br/>
-                        
+
+            <div class="col">
+                <p>You will be given a random number at the start of the game.</p>
+                       
                 <p>There are four crystals below. By clicking on a crystal, you will adda specific amout of points to your total score.</p>
-        
-                <br/>
-        
+            
                 <p>You win the game by matching your total score to random number. If your total score goes above the random number, you lose.</p>
-        
-                <br/>
-        
+            
                 <p>The value of each crystal is hidden from you until you click on it.</p>
-        
-                <br/>
-        
+            
                 <p>Each time the game starts, it will change the values of each crystal.</p>
             </div>
-               
+            
         </section>
+               
 
-        <div class="row">
-            <div class="col" id="newNumber">
+        <div class="row justify-content-between">
+            <div class="col-md-4" id="newNumber">
                 <p class="h3">Your number is: <span id="numberSelected"></span></p>
             </div>
-            <div class="col" id="wLCounter">
+            <div class="col-md-4" id="wLCounter">
                 <p id="win-lose-msg"></p>
                 <p class="h3">Wins: <span id="wins"></span></p>
                 <p class="h3">Losses: <span id="losses"></span></p>
