@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     $("#numberSelected").text(newNumber);
 
-    //Each of the crystals will pick a random number between 1 and 12.
+    //4 numbers between 1 and 12 will be selected.
 
     var allCrystals = [];
 
@@ -17,6 +17,37 @@ $(document).ready(function(){
     };
     
     console.log(allCrystals);
+
+    //Now, each of the crystals will be assigned with one of the numbers in the allCrystals array. Score will go up by corresponding random number when each crystal is pressed.
+
+    var totalScore = 0;
+
+    $("#red_crystal").on("click", function() {
+        totalScore = totalScore + allCrystals[0];
+        console.log(totalScore);
+        $("#totalScore").text(totalScore);
+    });
+
+    $("#blue_crystal").on("click", function() {
+        totalScore = totalScore + allCrystals[1];
+        console.log(totalScore);
+        $("#totalScore").text(totalScore);
+    });
+
+    $("#purple_crystal").on("click", function() {
+        totalScore = totalScore + allCrystals[2];
+        console.log(totalScore);
+        $("#totalScore").text(totalScore);
+    });
+
+    $("#pink_crystal").on("click", function() {
+        totalScore = totalScore + allCrystals[3];
+        console.log(totalScore);
+        $("#totalScore").text(totalScore);
+    });
+
+
+
 
 
 
