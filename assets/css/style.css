@@ -1,0 +1,26 @@
+body {
+    font-family: 'Margarine', cursive;
+    line-height: 1.5;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+section {
+    border: 5px dotted;
+    margin-bottom: 50px;
+}
+
+h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 5px outset;
+}
+
+#newNumber, #wLCounter, #playerScore {
+    border: 5px dotted;
+    margin-bottom: 50px;
+}
+
