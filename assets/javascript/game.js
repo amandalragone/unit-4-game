@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    //We need a function that will initialize a new game after player wins or loses.
+    //Global vars. 
 
     var newNumber
     var allCrystals
@@ -10,6 +10,9 @@ $(document).ready(function(){
     
     var losses = 0;
     $("#losses").text(losses);
+
+    //Function that will initialize a new game after player wins or loses.
+
 
     var newGame = function() {
 
@@ -31,6 +34,15 @@ $(document).ready(function(){
 
         console.log(allCrystals);
 
+        //Each number is associated to 1 crystal.
+
+        $("#red_crystal").attr( "value", allCrystals[0]);
+        $("#blue_crystal").attr( "value", allCrystals[1]);
+        $("#purple_crystal").attr( "value", allCrystals[2]);
+        $("#pink_crystal").attr( "value", allCrystals[3]);
+
+        //Total score is reset to 0.
+
         totalScore = 0;
         $("#totalScore").text(totalScore);
 
@@ -38,12 +50,12 @@ $(document).ready(function(){
 
     
 
-    //Now, each of the crystals will be assigned with one of the numbers in the allCrystals array. Score will go up by corresponding random number when each crystal is pressed.
+    //On click, score will go up by number that corresponds to the crystal pressed.
 
-
-    $("#red_crystal").on("click", function() {
-        totalScore = totalScore + allCrystals[0];
-        console.log(totalScore);
+    $(".crystal").on("click", function() {
+        var eachCrystal = ($(this).attr("value"));
+        eachCrystal = parseInt(eachCrystal);
+        totalScore = totalScore + eachCrystal;
         $("#totalScore").text(totalScore);
 
         //After the player makes the click, game needs to evaluate if player wins or loses.
@@ -61,67 +73,8 @@ $(document).ready(function(){
         };
     });
 
-    $("#blue_crystal").on("click", function() {
-        totalScore = totalScore + allCrystals[1];
-        console.log(totalScore);
-        $("#totalScore").text(totalScore);
+    //When page loads, new game starts.
 
-        //After the player makes the click, game needs to evaluate if player wins or loses.
-
-        if (totalScore === newNumber) {
-            wins = wins + 1;
-            $("#wins").text(wins);
-            $("#win-lose-msg").text("Congratulations! You've reached the correct number! We're setting your wins to " + wins + "! Let's play again.");
-            newGame();
-        } else if (totalScore > newNumber) {
-            losses = losses + 1;
-            $("#losses").text(losses);
-            $("#win-lose-msg").text("Oh oh, you lost... The number selected was " + newNumber + "... But it's ok. Let's try again now.");
-            newGame();
-        };
-    });
-
-    $("#purple_crystal").on("click", function() {
-        totalScore = totalScore + allCrystals[2];
-        console.log(totalScore);
-        $("#totalScore").text(totalScore);
-
-        //After the player makes the click, game needs to evaluate if player wins or loses.
-
-        if (totalScore === newNumber) {
-            wins = wins + 1;
-            $("#wins").text(wins);
-            $("#win-lose-msg").text("Congratulations! You've reached the correct number! We're setting your wins to " + wins + "! Let's play again.");
-            newGame();
-        } else if (totalScore > newNumber) {
-            losses = losses + 1;
-            $("#losses").text(losses);
-            $("#win-lose-msg").text("Oh oh, you lost... The number selected was " + newNumber + "... But it's ok. Let's try again now.");
-            newGame();
-        };
-    });
-
-    $("#pink_crystal").on("click", function() {
-        totalScore = totalScore + allCrystals[3];
-        console.log(totalScore);
-        $("#totalScore").text(totalScore);
-
-        //After the player makes the click, game needs to evaluate if player wins or loses.
-
-        if (totalScore === newNumber) {
-            wins = wins + 1;
-            $("#wins").text(wins);
-            $("#win-lose-msg").text("Congratulations! You've reached the correct number! We're setting your wins to " + wins + "! Let's play again.");
-            newGame();
-        } else if (totalScore > newNumber) {
-            losses = losses + 1;
-            $("#losses").text(losses);
-            $("#win-lose-msg").text("Oh oh, you lost... The number selected was " + newNumber + "... But it's ok. Let's try again now.");
-            newGame();
-        };
-
-    });
     newGame();
-
 
 })
